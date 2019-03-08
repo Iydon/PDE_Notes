@@ -1,0 +1,110 @@
+\documentclass{ctexart}
+\usepackage{lmodern}          % remove LaTeX Font Warning
+\usepackage{hyperref}         % add link
+\usepackage{pfnote}           % footnote count from 1
+\usepackage{bm}               % math bold
+\usepackage{amsmath,amssymb}  % math mode
+    \DeclareMathOperator{\diver}{div}
+    \newcommand{\I}{\mathrm{i}}
+    \newcommand{\D}{\mathrm{d}}
+    \newcommand{\RR}{\mathbb{R}}
+    \newcommand{\vecF}{{\bm F}}
+    \newcommand{\vecv}{\bm v}
+\begin{document}
+\section{线性偏微分方程}
+    \begin{enumerate}
+        \item Laplace方程
+            \[
+            \triangle u = 0;
+            \]
+        \item 特征值方程\footnote{$\lambda$为常数}
+            \[
+            \triangle u + \lambda u = 0;
+            \]
+        \item 热方程\footnote{$a>0$为常数}
+            \[
+            u_t - a^2\triangle u = 0;
+            \]
+        \item Schrödinger方程
+            \[
+            u_t - \I\triangle u = 0;
+            \]
+        \item Kolmogorov方程\footnote{其中$a_{ij},b_i(i,j=1,2,\ldots,n)$为常数}
+            \[
+            u_t - \sum_{i,j=1}^{n}a_{ij}u_{x_ix_j} + \sum_{i=1}^{n}b_iu_{x_i} = 0;
+            \]
+        \item Fokker-Planck方程\footnote{其中$a_{ij},b_i(i,j=1,2,\ldots,n)$为常数}
+            \[
+            u_t - \sum_{i,j=1}^{n}(a_{ij}u)_{x_ix_j} + \sum_{i=1}^{n}(b_iu)_{x_i} = 0;
+            \]
+        \item 输运方程\footnote{其中$b_i(i=1,2,\ldots,n)$为常数}
+            \[
+            u_t + \sum_{i=1}^{n}b_iu_{x_i} = 0;
+            \]
+        \item 波动方程\footnote{$a>0$为常数}
+            \[
+            u_{tt} - a^2\triangle u = 0;
+            \]
+        \item 电报方程\footnote{其中$a$为正常数, $b$为常数}
+            \[
+            u_{tt} - a^2\triangle u + bu_t = 0;
+            \]
+        \item 横梁方程
+            \[
+            u_t + u_{xxxx} = 0;
+            \]
+    \end{enumerate}
+
+\section{非线性偏微分方程}
+    \begin{enumerate}
+        \item 非线性Poisson方程
+            \[
+            \triangle u = u^3 - u;
+            \]
+        \item 极小曲面方程
+            \[
+            \diver\left(\frac{Du}{(1+|Du|^2)^{1/2}}\right) = 0;
+            \]
+        \item Monge-Ampère方程
+            \[
+            \det(D^2u) = f(x);
+            \]
+        \item Hamilton-Jacobi方程\footnote{其中$H:\RR^2\mapsto\RR$为已知函数}
+            \[
+            u_t + H(Du) = 0;
+            \]
+        \item Burgers方程
+            \[
+            u_t + uu_x = 0;
+            \]
+        \item 守恒律方程
+            \[
+            u_t + \diver\vecF(u) = 0;
+            \]
+        \item 多孔介质方程\footnote{$\gamma>1$为常数}
+            \[
+            u_t - \triangle u^\gamma = 0;
+            \]
+        \item Korteweg-deVries (KdV)方程
+            \[
+            u_t + uu_x + u_{xxx} = 0;
+            \]
+        \item $p$-Laplace方程\footnote{$p>1$为常数}
+            \[
+            \diver\left(|Du|^{p-2}Du\right) = 0;
+            \]
+        \item 非线性波动方程\footnote{$a>0$为常数}
+            \[
+            u_{tt} - a^2\triangle u = f(u);
+            \]
+        \item Boltzmann方程\footnote{其中$f=f(x,\vecv,t)$, $Q(f,f)=Q(f(x,\vecv,t),f(x,\vecv,t))$为碰撞项}
+            \[
+            f_t + \vecv\cdot D_xf = Q(f,f);
+            \]
+    \end{enumerate}
+
+\section{偏微分方程租}
+    \begin{enumerate}
+        \item 
+    \end{enumerate}
+\end{document}
